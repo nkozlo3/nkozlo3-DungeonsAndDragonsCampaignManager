@@ -1,30 +1,28 @@
 // Express application
 require("dotenv").config();
 const express = require("express");
+const mongoose = require("mongoose");
+const cors = require("cors");
 const app = express();
 
+app.use(cors());
+app.use(express.json());
+
 // Connect to MongoDB
-const mongoose = require("mongoose");
 mongoose
   .connect(process.env.MONGO_URI, {})
-  .then(() => console.log("Connected to mongo database"))
-  .catch((err) => console.log(err));
+  .then(() => console.log("MongoDB connected"))
+  .catch((error) => console.error(error));
 
-// default page
+const playerRoute = require("./routes/Player");
+app.use("/players", playerRoute);
+
 app.get("/", (req, res) => {
-  res.send("<h1>Hello, World!</h1>");
+  res.send("Hello World");
 });
-
-app.get("/first/message", (req, res) => {
-  res.send("Hello, Frontend 😍 Backend!");
-});
-
-const dmRoute = require("./routes/dm");
-
-app.use("/dm", dmRoute);
 
 const port = process.env.PORT || 5500;
 
 app.listen(port, () => {
-  console.log(`Server is running on port ${port}$`);
+  console.log(`Server is running on port ${port}`);
 });
