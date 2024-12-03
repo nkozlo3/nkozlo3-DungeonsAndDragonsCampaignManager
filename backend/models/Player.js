@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 const PlayerSchema = new mongoose.Schema({
   name: { type: String, required: true },
-  mainstats: { type: Object, default: {} },
+  mainstats: { type: Object, required: true },
   savingthrows: { type: Object, default: {} },
   senses: { type: Object, default: {} },
   hitpoints: { type: Object, default: {} },

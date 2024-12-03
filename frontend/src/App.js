@@ -24,9 +24,11 @@ function App() {
       <h1>DnD Campaign Manager</h1>
       <PlayerForm />
       <h2>Players</h2>
-      <ul>
+      <ul style={{ listStyle: "none" }}>
         {players.map((player) => (
-          <li key={player._id}>{player.name}</li>
+          <li key={player._id}>
+            <button>{player.name}</button>
+          </li>
         ))}
       </ul>
     </div>
