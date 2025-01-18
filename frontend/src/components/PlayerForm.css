@@ -1,3 +1,81 @@
-.submit-new-player {
-    
+.submit-new-player-form-container {
+  display: flex;
+  justify-content: space-between;
 }
+
+.player-name {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 3rem;
+  margin-left: 1rem;
+}
+
+.player-name input {
+  width: 15%;
+}
+
+.player-main-stats {
+  display: flex;
+  margin-left: 1rem;
+}
+
+.player-description {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20rem;
+}
+
+.other-stats {
+  display: flex;
+  flex-direction: column;
+}
+
+.submit-new-player {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.submit-new-player button {
+    align-self: flex-end;
+}
+
+/* .button-description button {
+
+} */
+
+
+.cButton {
+    align-items: center;
+    border: none;
+    padding: 1rem 2rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-flex;
+    font-size: 1rem;
+    margin: 0.5rem 0.5rem;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    margin-top: 5%;
+    background-color: black;
+    color: white;
+    border: 2px solid red;
+  }
+  
+  .cButton:hover {
+    background-color: rgb(240, 128, 128);
+    color: rgb(55, 54, 54);
+  }
+  
+  .cButton.active {
+    background-color: brown;
+    color: rgb(55, 54, 54);
+  }
+
+  
+
+  .submitButton {
+    display: flex;
+    justify-content: center;
+    margin-left: -10rem;
+  }

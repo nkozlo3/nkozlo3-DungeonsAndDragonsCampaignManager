@@ -21,9 +21,13 @@ function App() {
 
   return (
     <div>
-      <h1>DnD Campaign Manager</h1>
+      <div class="headers-generic">
+        <h1>DnD Campaign Manager</h1>
+      </div>
       <PlayerForm />
-      <h2>Players</h2>
+      <div class="headers-generic">
+        <h2>Players</h2>
+      </div>
       <ul style={{ listStyle: "none" }}>
         {players.map((player) => (
           <li key={player._id}>

@@ -6,6 +6,7 @@ router.post("/", async (req, res) => {
   const player = new Player({
     name: req.body.name,
     mainstats: req.body.mainstats,
+    description: req.body.description,
   });
 
   try {
