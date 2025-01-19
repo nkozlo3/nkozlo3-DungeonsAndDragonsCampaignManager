@@ -48,78 +48,110 @@ function PlayerForm() {
         <div className="other-stats">
           <div className="player-name">
             <label>Player Name</label>
-            <input
-              type="text"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-            />
+            <div className="input-cool-container">
+              <input
+                type="text"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+              />
+            </div>
           </div>
           <div className="player-main-stats">
             <label>
-              Strength
-              <input
-                type="number"
-                name="STRENGTH"
-                min="8"
-                max="16"
-                value={mainstats.STRENGTH}
-                onChange={handleStatChange}
-              ></input>
+              <div className="input-cool-container padding-stats" id="dynamic-input">
+                <div className="stat-name">STRENGTH</div>
+                <input
+                  type="number"
+                  name="STRENGTH"
+                  min="8"
+                  max="16"
+                  value={mainstats.STRENGTH}
+                  onChange={handleStatChange}
+                ></input>
+                <div className="dynamic-value" id="dynamic-value">
+                  {Math.floor((mainstats.STRENGTH - 10) / 2)}
+                </div>
+              </div>
             </label>
             <label>
-              Dexterity
-              <input
-                type="number"
-                name="DEXTERITY"
-                min="8"
-                max="16"
-                value={mainstats.DEXTERITY}
-                onChange={handleStatChange}
-              ></input>
+              <div className="input-cool-container padding-stats" id="dynamic-input">
+                <div className="stat-name">DEXTERITY</div>
+                <input
+                  type="number"
+                  name="DEXTERITY"
+                  min="8"
+                  max="16"
+                  value={mainstats.DEXTERITY}
+                  onChange={handleStatChange}
+                ></input>
+                <div className="dynamic-value" id="dynamic-value">
+                  {Math.floor((mainstats.DEXTERITY - 10) / 2)}
+                </div>
+              </div>
             </label>
             <label>
-              Constitution
-              <input
-                type="number"
-                name="CONSTITUTION"
-                min="8"
-                max="16"
-                value={mainstats.CONSTITUTION}
-                onChange={handleStatChange}
-              ></input>
+              <div className="input-cool-container padding-stats" id="dynamic-input">
+                <div className="stat-name">CONSTITUTION</div>
+                <input
+                  type="number"
+                  name="CONSTITUTION"
+                  min="8"
+                  max="16"
+                  value={mainstats.CONSTITUTION}
+                  onChange={handleStatChange}
+                ></input>
+                <div className="dynamic-value" id="dynamic-value">
+                  {Math.floor((mainstats.CONSTITUTION - 10) / 2)}
+                </div>
+              </div>
             </label>
             <label>
-              Intelligence
-              <input
-                type="number"
-                name="INTELLIGENCE"
-                min="8"
-                max="16"
-                value={mainstats.INTELLIGENCE}
-                onChange={handleStatChange}
-              ></input>
+              <div className="input-cool-container padding-stats" id="dynamic-input">
+                <div className="stat-name">INTELLIGENCE</div>
+                <input
+                  type="number"
+                  name="INTELLIGENCE"
+                  min="8"
+                  max="16"
+                  value={mainstats.INTELLIGENCE}
+                  onChange={handleStatChange}
+                ></input>
+                <div className="dynamic-value" id="dynamic-value">
+                  {Math.floor((mainstats.INTELLIGENCE - 10) / 2)}
+                </div>
+              </div>
             </label>
             <label>
-              Wisdom
-              <input
-                type="number"
-                name="WISDOM"
-                min="8"
-                max="16"
-                value={mainstats.WISDOM}
-                onChange={handleStatChange}
-              ></input>
+              <div className="input-cool-container padding-stats" id="dynamic-input">
+                <div className="stat-name">WISDOM</div>
+                <input
+                  type="number"
+                  name="WISDOM"
+                  min="8"
+                  max="16"
+                  value={mainstats.WISDOM}
+                  onChange={handleStatChange}
+                ></input>
+                <div className="dynamic-value" id="dynamic-value">
+                  {Math.floor((mainstats.WISDOM - 10) / 2)}
+                </div>
+              </div>
             </label>
             <label>
-              Charisma
-              <input
-                type="number"
-                name="CHARISMA"
-                min="8"
-                max="16"
-                value={mainstats.CHARISMA}
-                onChange={handleStatChange}
-              ></input>
+              <div className="input-cool-container padding-stats" id="dynamic-input">
+                <div className="stat-name">CHARISMA</div>
+                <input
+                  type="number"
+                  name="CHARISMA"
+                  min="8"
+                  max="16"
+                  value={mainstats.CHARISMA}
+                  onChange={handleStatChange}
+                ></input>
+                <div className="dynamic-value" id="dynamic-value">
+                  {Math.floor((mainstats.CHARISMA - 10) / 2)}
+                </div>
+              </div>
             </label>
           </div>
         </div>
@@ -127,15 +159,21 @@ function PlayerForm() {
         <div className="button-description">
           <div className="player-description">
             <label>Description</label>
+            <div className="input-cool-container">
             <textarea
               value={description}
               onChange={(e) => setDescription(e.target.value)}
-              cols={30}
+              cols={89}
               rows={20}
             />
+            </div>
           </div>
 
-          <button className="cButton submitButton" type="submit">Add Player</button>
+          <div className="submitButton-container">
+            <button className="cButton" type="submit">
+              Add Player
+            </button>
+          </div>
         </div>
       </form>
     </div>
