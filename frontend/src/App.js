@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+// import {Link} from "react-router-dom";
 import "./App.css";
 import PlayerForm from "./components/PlayerForm";
 
@@ -28,13 +29,20 @@ function App() {
       <div class="headers-generic">
         <h2>Players</h2>
       </div>
-      <ul style={{ listStyle: "none" }}>
-        {players.map((player) => (
-          <li key={player._id}>
-            <button>{player.name}</button>
-          </li>
-        ))}
-      </ul>
+      <div className="player-buttons">
+        <ul className="horizontal-ul" style={{ listStyle: "none" }}>
+          {players.map((player) => (
+            <li key={player._id}>
+              <a
+                className="non-standard-links cButton"
+                href="https://google.com"
+              >
+                {player.name}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
     </div>
   );
 }

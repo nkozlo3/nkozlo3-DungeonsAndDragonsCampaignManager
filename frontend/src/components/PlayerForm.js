@@ -58,7 +58,10 @@ function PlayerForm() {
           </div>
           <div className="player-main-stats">
             <label>
-              <div className="input-cool-container padding-stats" id="dynamic-input">
+              <div
+                className="input-cool-container padding-stats"
+                id="dynamic-input"
+              >
                 <div className="stat-name">STRENGTH</div>
                 <input
                   type="number"
@@ -74,7 +77,10 @@ function PlayerForm() {
               </div>
             </label>
             <label>
-              <div className="input-cool-container padding-stats" id="dynamic-input">
+              <div
+                className="input-cool-container padding-stats"
+                id="dynamic-input"
+              >
                 <div className="stat-name">DEXTERITY</div>
                 <input
                   type="number"
@@ -90,7 +96,10 @@ function PlayerForm() {
               </div>
             </label>
             <label>
-              <div className="input-cool-container padding-stats" id="dynamic-input">
+              <div
+                className="input-cool-container padding-stats"
+                id="dynamic-input"
+              >
                 <div className="stat-name">CONSTITUTION</div>
                 <input
                   type="number"
@@ -106,7 +115,10 @@ function PlayerForm() {
               </div>
             </label>
             <label>
-              <div className="input-cool-container padding-stats" id="dynamic-input">
+              <div
+                className="input-cool-container padding-stats"
+                id="dynamic-input"
+              >
                 <div className="stat-name">INTELLIGENCE</div>
                 <input
                   type="number"
@@ -122,7 +134,10 @@ function PlayerForm() {
               </div>
             </label>
             <label>
-              <div className="input-cool-container padding-stats" id="dynamic-input">
+              <div
+                className="input-cool-container padding-stats"
+                id="dynamic-input"
+              >
                 <div className="stat-name">WISDOM</div>
                 <input
                   type="number"
@@ -138,7 +153,10 @@ function PlayerForm() {
               </div>
             </label>
             <label>
-              <div className="input-cool-container padding-stats" id="dynamic-input">
+              <div
+                className="input-cool-container padding-stats"
+                id="dynamic-input"
+              >
                 <div className="stat-name">CHARISMA</div>
                 <input
                   type="number"
@@ -160,17 +178,21 @@ function PlayerForm() {
           <div className="player-description">
             <label>Description</label>
             <div className="input-cool-container">
-            <textarea
-              value={description}
-              onChange={(e) => setDescription(e.target.value)}
-              cols={89}
-              rows={20}
-            />
+              <textarea
+                value={description}
+                onChange={(e) => setDescription(e.target.value)}
+                cols={89}
+                rows={20}
+              />
             </div>
           </div>
 
           <div className="submitButton-container">
-            <button className="cButton" type="submit">
+            <button
+              style={{ marginTop: "5%" }}
+              className="cButton"
+              type="submit"
+            >
               Add Player
             </button>
           </div>
