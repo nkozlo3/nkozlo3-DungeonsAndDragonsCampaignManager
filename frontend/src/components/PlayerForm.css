@@ -128,3 +128,12 @@
   color: white;
 }
 
+
+
+.register-user-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  min-height: 100vh;
+}

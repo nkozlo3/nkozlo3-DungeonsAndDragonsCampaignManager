@@ -59,7 +59,7 @@ function App() {
         <>
           <div className="logout-wrapper">
             <div class="headers-generic">
-              <h1>DnD Campaign Manager</h1>
+              <h1>DnD Character Manager</h1>
             </div>
             <div className="logout-button">
               <button className="cButton" onClick={logout}>
