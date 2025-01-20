@@ -47,11 +47,11 @@ function PlayerForm() {
       <form className="submit-new-player" onSubmit={handleSubmit}>
         <div className="other-stats">
           <div className="player-name">
+            <label>Player Name</label>
             <div className="input-cool-container">
               <input
                 type="text"
                 value={name}
-                placeholder="Player Name"
                 onChange={(e) => setName(e.target.value)}
               />
             </div>
@@ -176,10 +176,10 @@ function PlayerForm() {
 
         <div className="button-description">
           <div className="player-description">
+            <label>Description</label>
             <div className="input-cool-container">
               <textarea
                 value={description}
-                placeholder="Player Description and Background"
                 onChange={(e) => setDescription(e.target.value)}
                 cols={89}
                 rows={20}

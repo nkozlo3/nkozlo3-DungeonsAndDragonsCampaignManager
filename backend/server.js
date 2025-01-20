@@ -17,6 +17,9 @@ mongoose
 const playerRoute = require("./routes/Player");
 app.use("/players", playerRoute);
 
+const userRoute = require("./routes/User");
+app.use("/", userRoute);
+
 app.get("/", (req, res) => {
   res.send("Hello World");
 });

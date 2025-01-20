@@ -18,8 +18,9 @@ router.post("/", async (req, res) => {
 });
 
 router.get("/", async (req, res) => {
+  const userId = req.userId;
   try {
-    const players = await Player.find();
+    const players = await Player.find({ userId });
     res.json(players);
   } catch (error) {
     res.json({ message: error });
