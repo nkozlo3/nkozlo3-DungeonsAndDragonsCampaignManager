@@ -1,0 +1,26 @@
+.input-cool-container-p {
+  position: relative;
+  text-align: center;
+  background: white;
+  border: 2px solid red;
+  width: 200%;
+  border-radius: 10px;
+  display: inline-block;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  align-items: center;
+  justify-content: center;
+}
+
+.main-stats-details {
+  display: flex;
+  flex-direction: row;
+  gap: 4rem;
+}
+
+.player-details-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}

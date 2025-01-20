@@ -1,8 +1,15 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-// import {Link} from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  Link,
+  useLocation,
+} from "react-router-dom";
 import "./App.css";
 import PlayerForm from "./components/PlayerForm";
+import PlayerDetail from "./components/PlayerDetail";
 
 function App() {
   const [players, setPlayers] = useState([]);
@@ -18,31 +25,40 @@ function App() {
     };
 
     fetchPlayers();
-  });
+  }, []);
 
+  const location = useLocation();
   return (
     <div>
-      <div class="headers-generic">
-        <h1>DnD Campaign Manager</h1>
-      </div>
-      <PlayerForm />
-      <div class="headers-generic">
-        <h2>Players</h2>
-      </div>
-      <div className="player-buttons">
-        <ul className="horizontal-ul" style={{ listStyle: "none" }}>
-          {players.map((player) => (
-            <li key={player._id}>
-              <a
-                className="non-standard-links cButton"
-                href="https://google.com"
-              >
-                {player.name}
-              </a>
-            </li>
-          ))}
-        </ul>
-      </div>
+      {location.pathname === "/" && (
+        <>
+          <div class="headers-generic">
+            <h1>DnD Campaign Manager</h1>
+          </div>
+
+          <PlayerForm />
+          <div class="headers-generic">
+            <h2>Players</h2>
+          </div>
+          <div className="player-buttons">
+            <ul className="horizontal-ul" style={{ listStyle: "none" }}>
+              {players.map((player) => (
+                <li key={player._id}>
+                  <Link
+                    className="non-standard-links cButton"
+                    to={`/players/${player._id}`}
+                  >
+                    {player.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </>
+      )}
+      <Routes>
+        <Route path="/players/:id" element={<PlayerDetail />} />
+      </Routes>
     </div>
   );
 }
