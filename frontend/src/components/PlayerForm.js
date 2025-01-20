@@ -19,16 +19,24 @@ function PlayerForm() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
+      const token = localStorage.getItem("token");
+      console.log("Token object to be sent:", token);
       const player = { name, mainstats, description };
       console.log("Player object to be sent:", player);
       const response = await axios.post(
         "http://localhost:5500/players",
-        player
+        player,
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+            "Content-Type": "application/json",
+          },
+        }
       );
       console.log("Player added");
       console.log(response);
 
-      window.location.reload();
+      // window.location.reload();
     } catch (error) {
       console.error(error);
     }

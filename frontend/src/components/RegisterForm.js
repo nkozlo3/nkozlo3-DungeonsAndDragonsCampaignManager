@@ -29,7 +29,8 @@ function RegisterForm({ setIsLoggedIn }) {
       const user = { username, password };
       console.log("Loggin in: ", user);
       const response = await axios.post("http://localhost:5500/login", user);
-      console.log("User Logged in");
+      localStorage.setItem("token", response.data.token);
+      console.log("TOKEN BEING SAVED: ", response.data.token);
       setIsLoggedIn(true);
       navigate("/");
       console.log(response);

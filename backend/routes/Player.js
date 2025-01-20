@@ -1,12 +1,14 @@
 const express = require("express");
 const router = express.Router();
 const Player = require("../models/Player");
+const auth = require("../middleware/auth");
 
-router.post("/", async (req, res) => {
+router.post("/", auth, async (req, res) => {
   const player = new Player({
     name: req.body.name,
     mainstats: req.body.mainstats,
     description: req.body.description,
+    userId: req.userId,
   });
 
   try {
