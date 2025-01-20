@@ -20,6 +20,7 @@ function PlayerForm() {
     e.preventDefault();
     try {
       const token = localStorage.getItem("token");
+      console.log("Authorization header:", `Bearer ${token}`);
       console.log("Token object to be sent:", token);
       const player = { name, mainstats, description };
       console.log("Player object to be sent:", player);

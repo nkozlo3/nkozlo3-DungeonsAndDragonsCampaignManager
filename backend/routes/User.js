@@ -3,7 +3,6 @@ const bcrypt = require("bcrypt");
 const paseto = require("paseto");
 const router = express.Router();
 const User = require("../models/User");
-const crypto = require("crypto");
 
 const keyPair = require("../utils/keys");
 

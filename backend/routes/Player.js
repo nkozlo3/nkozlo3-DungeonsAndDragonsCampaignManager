@@ -19,12 +19,19 @@ router.post("/", auth, async (req, res) => {
   }
 });
 
-router.get("/", async (req, res) => {
+router.get("/", auth, async (req, res) => {
+  console.log("Here we are");
   const userId = req.userId;
+  console.log("Getting players with the following user id?: ", { userId });
   try {
+    const allPlayers = await Player.find({});
+    // console.log("All players in DB:", allPlayers);
+
     const players = await Player.find({ userId });
+    console.log("the players we got: ", players);
     res.json(players);
   } catch (error) {
+    console.log("we had an error in get /");
     res.json({ message: error });
   }
 });

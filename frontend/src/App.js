@@ -17,11 +17,16 @@ import RegisterForm from "./components/RegisterForm";
 function App() {
   const [players, setPlayers] = useState([]);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-
   useEffect(() => {
     const fetchPlayers = async () => {
       try {
-        const response = await axios.get("http://localhost:5500/players");
+        const token = localStorage.getItem("token");
+        const response = await axios.get("http://localhost:5500/players", {
+          headers: {
+            Authorization: `Bearer ${token}`,
+            "Content-Type": "application/json",
+          },
+        });
         setPlayers(response.data);
       } catch (error) {
         console.error(error);
