@@ -46,8 +46,13 @@ function App() {
     <div>
       {location.pathname === "/" && (
         <>
-          <div class="headers-generic">
-            <h1>DnD Campaign Manager</h1>
+          <div className="logout-wrapper">
+            <div class="headers-generic">
+              <h1>DnD Campaign Manager</h1>
+            </div>
+            <div className="logout-button">
+              <button className="cButton">Logout</button>
+            </div>
           </div>
 
           <PlayerForm />

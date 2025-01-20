@@ -11,12 +11,26 @@ body {
   text-align: center;
 }
 
+.logout-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.logout-button {
+  position:absolute;
+  right: 4rem;
+}
+
 .headers-generic {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 1rem;
+  width: 100%;
 }
 
 .standard-links {
@@ -53,5 +67,3 @@ body {
 .horizontal-ul li {
   display: inline;
 }
-
-

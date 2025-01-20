@@ -3,10 +3,16 @@ import { useNavigate } from "react-router";
 import axios from "axios";
 
 function RegisterForm({ setIsLoggedIn }) {
+  const navigate = useNavigate();
+  
+  if (localStorage.getItem("token")) {
+    setIsLoggedIn(true);
+    navigate("/");
+  }
+
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
-  const navigate = useNavigate();
 
   const handleRegister = async (e) => {
     e.preventDefault();
@@ -14,6 +20,7 @@ function RegisterForm({ setIsLoggedIn }) {
       const user = { username, password };
       console.log("New User: ", user);
       const response = await axios.post("http://localhost:5500/register", user);
+      localStorage.setItem("token", response.data.token);
       console.log("New User Registered");
       setIsLoggedIn(true);
       navigate("/");
