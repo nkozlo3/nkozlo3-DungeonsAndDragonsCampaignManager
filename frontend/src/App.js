@@ -36,6 +36,17 @@ function App() {
     fetchPlayers();
   }, []);
 
+  const logout = async (e) => {
+    e.preventDefault();
+
+    try {
+      localStorage.removeItem("token");
+      setIsLoggedIn(false);
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
   const location = useLocation();
 
   if (!isLoggedIn && location.pathname !== "/register") {
@@ -51,7 +62,9 @@ function App() {
               <h1>DnD Campaign Manager</h1>
             </div>
             <div className="logout-button">
-              <button className="cButton">Logout</button>
+              <button className="cButton" onClick={logout}>
+                Logout
+              </button>
             </div>
           </div>
 
