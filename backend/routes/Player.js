@@ -26,4 +26,13 @@ router.get("/", async (req, res) => {
   }
 });
 
+router.get("/:id", async (req, res) => {
+  try {
+    const player = await Player.findById(req.params.id);
+    res.json(player);
+  } catch (error) {
+    res.json({ message: error });
+  }
+});
+
 module.exports = router;

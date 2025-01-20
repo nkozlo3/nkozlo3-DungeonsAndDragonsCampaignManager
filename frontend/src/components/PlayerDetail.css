@@ -1,7 +1,7 @@
 .input-cool-container-p {
   position: relative;
   text-align: center;
-  background: white;
+  background: black;
   border: 2px solid red;
   width: 200%;
   border-radius: 10px;
@@ -14,7 +14,7 @@
 .main-stats-details {
   display: flex;
   flex-direction: row;
-  gap: 4rem;
+  gap: 6rem;
 }
 
 .player-details-container {
@@ -24,3 +24,21 @@
   align-items: center;
   gap: 2rem;
 }
+
+
+.headers-generic {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .headers-generic h1 {
+    font-size: 2rem;
+    color: rgb(212, 152, 152);
+  }
+  
+  .headers-generic:hover h1 {
+    color: rgb(108, 24, 24);
+  }

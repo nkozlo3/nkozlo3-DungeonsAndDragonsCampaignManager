@@ -38,7 +38,7 @@ function App() {
 
           <PlayerForm />
           <div class="headers-generic">
-            <h2>Players</h2>
+            <h1>Players</h1>
           </div>
           <div className="player-buttons">
             <ul className="horizontal-ul" style={{ listStyle: "none" }}>

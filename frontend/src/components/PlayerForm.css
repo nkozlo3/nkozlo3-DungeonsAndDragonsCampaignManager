@@ -1,6 +1,7 @@
 .submit-new-player-form-container {
   display: flex;
   justify-content: center;
+  background-color: black;
 }
 
 .player-name {
@@ -8,6 +9,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: black;
 }
 
 .player-main-stats {
@@ -25,6 +27,7 @@
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  background-color: black;
 }
 
 .submit-new-player {
@@ -32,6 +35,7 @@
   justify-content: space-between;
   flex-direction: column;
   gap: 2rem;
+  background-color: black;
 }
 
 .cButton {
@@ -69,7 +73,7 @@
 .input-cool-container {
   position: relative;
   text-align: center;
-  background: white;
+  background: black;
   border: 2px solid red;
   border-radius: 10px;
   display: inline-block;
@@ -77,7 +81,8 @@
 }
 
 .padding-stats {
-  padding: 10px
+  padding: 10px;
+  background-color: black;
 }
 
 .input-cool-container input,
@@ -86,7 +91,8 @@
   background: transparent;
   border: none;
   outline: none;
-  color: black;
+  color: white;
+  background-color: black;
 }
 
 .input-cool-container input {
@@ -97,8 +103,16 @@
   position: absolute;
   top: -20px;
   left: 0;
-  background-color: white;
-  color: #303030;
+  background-color: black;
+  color: white;
+}
+
+.stat-value {
+  /* position: absolute; */
+  /* bottom: -20px; */
+  /* left: 0; */
+  background-color: black;
+  color: white;
 }
 
 .dynamic-value {
@@ -107,10 +121,10 @@
   bottom: -20px;
   left: 50%;
   transform: translateX(-50%);
-  background-color: white;
+  background-color: black;
   padding: 4px 8px;
   border-radius: 50%;
   border: 2px solid red;
-  color: #333;
+  color: white;
 }
 
